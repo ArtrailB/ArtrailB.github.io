@@ -1,0 +1,15 @@
+graph TD
+    A[Start] --> B[Login Page]
+    B -->|Valid Credentials| C[Dashboard]
+    B -->|Invalid Credentials| D[Error Message]
+    C --> E[Perform Action]
+    E --> F[Save Changes]
+    D --> B
+    F --> G[Logout]
+    G --> A
+
+**A**: The starting point of the flow. **B**: The login page where users input credentials.
+**C**: Users access the dashboard if the credentials are valid.- **D**: An error message appears for invalid credentials, and the user is redirected to the login page.
+ **E**: Represents a specific action performed in the dashboard.
+ **F**: Changes are saved after performing the action.
+ **G**: Users log out, which returns them to the start of the process.
